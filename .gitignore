@@ -45,3 +45,6 @@ lerna-debug.log*
 # Local configuration
 config.local.js
 config.local.ts 
+
+# Cursor rules
+.cursorrules
