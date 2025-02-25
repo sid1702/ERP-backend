@@ -6,7 +6,6 @@ import { User } from './entities/user.entity';
 import { LoginDto } from './dto/login.dto';
 import { AuthResponseDto } from './dto/auth-response.dto';
 import { ProfileResponseDto } from './dto/profile-response.dto';
-import { ConfigService } from '@nestjs/config';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -15,7 +14,6 @@ export class AuthService {
     @InjectRepository(User)
     private userRepository: Repository<User>,
     private jwtService: JwtService,
-    private configService: ConfigService,
   ) {}
 
   async login(loginDto: LoginDto): Promise<AuthResponseDto> {
